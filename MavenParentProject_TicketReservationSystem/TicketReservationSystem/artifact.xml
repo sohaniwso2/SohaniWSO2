@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="CustomerAPI" groupId="com.example.TicketReservationSystem.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CustomerAPI.xml</file>
+    </artifact>
+    <artifact name="PostCustomerInSequence" groupId="com.example.TicketReservationSystem.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/PostCustomerInSequence.xml</file>
+    </artifact>
+    <artifact name="GetCustomerInSequence" groupId="com.example.TicketReservationSystem.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/GetCustomerInSequence.xml</file>
+    </artifact>
+    <artifact name="GetCustomerOutSequence" groupId="com.example.TicketReservationSystem.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/GetCustomerOutSequence.xml</file>
+    </artifact>
+    <artifact name="MakeRequestSequence" groupId="com.example.TicketReservationSystem.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/MakeRequestSequence.xml</file>
+    </artifact>
+    <artifact name="SendConfirmationSequence" groupId="com.example.TicketReservationSystem.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SendConfirmationSequence.xml</file>
+    </artifact>
+</artifacts>

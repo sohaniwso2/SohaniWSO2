@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="registry-info.xml" isCollection="false" path="/_system/governance/TicketReservationGregProject/target/registry_resources/BookingServiceEP_1.0.0/registry-info.xml" registryUrl="https://localhost:9443/registry" md5="fa12261ab2bc61b11bbdb59d6a9eebf8">
+    <mediaType>application/xml</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1391765345660</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1391765345660</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

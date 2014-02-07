@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="endpoint_BookingServiceEP.esb" isCollection="false" path="/_system/governance/TicketReservationGregProject/endpoint_BookingServiceEP.esb" registryUrl="https://localhost:9443/registry" md5="b8d2082a09bc133cc7b39bef06340cf8">
+    <mediaType>null</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1391765345594</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1391765345594</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

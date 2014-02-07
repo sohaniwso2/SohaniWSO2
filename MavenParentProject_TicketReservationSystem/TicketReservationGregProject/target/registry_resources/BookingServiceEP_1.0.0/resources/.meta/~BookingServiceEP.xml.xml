@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="BookingServiceEP.xml" isCollection="false" path="/_system/governance/TicketReservationGregProject/target/registry_resources/BookingServiceEP_1.0.0/resources/BookingServiceEP.xml" registryUrl="https://localhost:9443/registry" md5="36f667716697ae8c84d01b3a1a09e915">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1391765345677</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1391765345677</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

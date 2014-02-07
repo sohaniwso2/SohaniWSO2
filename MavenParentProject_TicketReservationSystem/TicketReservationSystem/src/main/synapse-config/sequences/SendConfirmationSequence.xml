@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="SendConfirmationSequence">
+    <log level="full">
+        <property name="text" value="** Ticket Confirmaiton Process **"/>
+    </log>
+    <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
+    <header name="To" scope="default" action="remove"/>
+    <property name="RequestID" expression="//jsonObject/confirm/title/requestID/text()" scope="default" type="STRING"/>
+    <property name="RowNumber" expression="//jsonObject/confirm/title/rowNumber/text()" scope="default" type="STRING"/>
+    <property name="NoOfBookedSeats" expression="//jsonObject/confirm/title/noOfBookedSeats/text()" scope="default" type="STRING"/>
+    <iterate xmlns:m="http://schemas.xmlsoap.org/soap/envelope/" continueParent="true" id="iter1" expression="//jsonObject/confirm/title">
+        <target>
+            <sequence>
+                <property name="RequestID" expression="//requestID/text()" scope="default" type="STRING"/>
+                <property name="RowNumber" expression="//rowNumber/text()" scope="default" type="STRING"/>
+                <property name="NoOfBookedSeats" expression="//noOfBookedSeats/text()" scope="default" type="STRING"/>
+            </sequence>
+        </target>
+    </iterate>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Before Sending Confirmaiton to BookingService : ======================="/>
+    </log>
+    <payloadFactory media-type="xml" description="">
+        <format>
+            <p:createconfirmation xmlns:p="http://customer.axis.org">
+                <p:requestID>$1</p:requestID>
+                <p:rowNumber>$2</p:rowNumber>
+                <p:noOfBookedSeats>$3</p:noOfBookedSeats>
+            </p:createconfirmation>
+        </format>
+        <args>
+            <arg evaluator="xml" expression="//jsonObject/confirm/title/requestID/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/confirm/title/rowNumber/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/confirm/title/noOfBookedSeats/text()"/>
+        </args>
+    </payloadFactory>
+    <log level="custom">
+        <property name="text" value="** User Confirmaiton to be sent ........ **"/>
+        <property name="RequestID" expression="$ctx:RequestID"/>
+        <property name="RowNumber" expression="$ctx:RowNumber"/>
+        <property name="NoOfSeats" expression="$ctx:NoOfBookedSeats"/>
+    </log>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Sending Confiamation To BookingService======================="/>
+    </log>
+    <log level="full" separator=","/>
+    <send>
+        <endpoint key="SendConfirmationEP"/>
+    </send>
+</sequence>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="GetCustomerOutSequence">
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="------------------- Response Received - From : Login DataService ----------------------------------"/>
+    </log>
+    <log level="full" separator=","/>
+    <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:ns3="http://org.apache.synapse/xsd" xmlns:p="http://ticketReservationSystem.com" name="UID" expression="//Customers/Customer/UID/text()" scope="default" type="STRING"/>
+    <log level="custom" separator=",">
+        <property xmlns:ns="http://org.apache.synapse/xsd" xmlns:ns3="http://org.apache.synapse/xsd" name="UID" expression="$ctx:UID"/>
+    </log>
+    <send/>
+</sequence>

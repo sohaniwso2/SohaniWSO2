@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="GetCustomerInSequence">
+    <log level="full">
+        <property name="text" value="** Customer Login Process **"/>
+    </log>
+    <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
+    <header name="To" scope="default" action="remove"/>
+    <property name="UName" expression="//jsonObject/login/title/UName/text()" scope="default" type="STRING"/>
+    <property name="password" expression="//jsonObject/login/title/password/text()" scope="default" type="STRING"/>
+    <log level="custom" separator=",">
+        <property name="UName" expression="$ctx:UName"/>
+        <property name="password" expression="$ctx:password"/>
+    </log>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Before Sending message to Customer Login Data Service ======================="/>
+    </log>
+    <payloadFactory media-type="json">
+        <format>
+			{
+			"_get_login_json": {
+			"UName": "$1",
+			"password": "$2"
+			}
+			}
+		</format>
+        <args>
+            <arg xmlns:ns="http://org.apache.synapse/xsd" xmlns:ns3="http://org.apache.synapse/xsd" evaluator="xml" expression="//jsonObject/login/title/UName/text()"/>
+            <arg xmlns:ns="http://org.apache.synapse/xsd" xmlns:ns3="http://org.apache.synapse/xsd" evaluator="xml" expression="//jsonObject/login/title/password/text()"/>
+        </args>
+    </payloadFactory>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Sending Request To Customer Login Data Service ======================="/>
+    </log>
+    <log level="full" separator=","/>
+    <send>
+        <endpoint key="CustomerDataEP"/>
+    </send>
+</sequence>

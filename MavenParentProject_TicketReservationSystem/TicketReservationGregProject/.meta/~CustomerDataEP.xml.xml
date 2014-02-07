@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="CustomerDataEP.xml" isCollection="false" path="/_system/governance/TicketReservationGregProject/CustomerDataEP.xml" registryUrl="https://localhost:9443/registry" md5="b736644f27b32e3473ce88235fd546d3">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1391709842409</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1391709842409</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

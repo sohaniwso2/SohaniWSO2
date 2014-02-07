@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="MakeRequestSequence">
+    <log level="full">
+        <property name="text" value="** Customer Ticket Requesting Process **"/>
+    </log>
+    <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
+    <header name="To" scope="default" action="remove"/>
+    <property name="CustomerID" expression="//jsonObject/request/title/customerID/text()" scope="default" type="STRING"/>
+    <property name="RequestID" expression="//jsonObject/request/title/requestID/text()" scope="default" type="STRING"/>
+    <property name="MovieName" expression="//jsonObject/request/title/movieName/text()" scope="default" type="STRING"/>
+    <property name="NoOfSeats" expression="//jsonObject/request/title/noOfRequestedSeats/text()" scope="default" type="STRING"/>
+    <iterate xmlns:m="http://schemas.xmlsoap.org/soap/envelope/" continueParent="true" id="iter1" expression="//jsonObject/request/title">
+        <target>
+            <sequence>
+                <property name="CustomerID" expression="//customerID/text()" scope="default" type="STRING"/>
+                <property name="RequestID" expression="//requestID/text()" scope="default" type="STRING"/>
+                <property name="MovieName" expression="//movieName/text()" scope="default" type="STRING"/>
+                <property name="NoOfSeats" expression="//noOfRequestedSeats/text()" scope="default" type="STRING"/>
+            </sequence>
+        </target>
+    </iterate>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Before Sending User Request to BookingService : ======================="/>
+    </log>
+    <payloadFactory media-type="xml" description="">
+        <format>
+            <p:createrequest xmlns:p="http://customer.axis.org">
+                <p:customerID>$1</p:customerID>
+                <p:requestID>$2</p:requestID>
+                <p:movieName>$3</p:movieName>
+                <p:noOfRequestedSeats>$4</p:noOfRequestedSeats>
+            </p:createrequest>
+        </format>
+        <args>
+            <arg evaluator="xml" expression="//jsonObject/request/title/customerID/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/request/title/requestID/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/request/title/movieName/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/request/title/noOfRequestedSeats/text()"/>
+        </args>
+    </payloadFactory>
+    <log level="custom">
+        <property name="text" value="** User Request to be sent ........ **"/>
+        <property name="CustomerID" expression="$ctx:CustomerID"/>
+        <property name="RequestID" expression="$ctx:RequestID"/>
+        <property name="MovieName" expression="$ctx:MovieName"/>
+        <property name="NoOfSeats" expression="$ctx:NoOfSeats"/>
+    </log>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Sending Request To BookingService======================="/>
+    </log>
+    <log level="full" separator=","/>
+    <send>
+        <endpoint key="BookingServiceEP"/>
+    </send>
+</sequence>

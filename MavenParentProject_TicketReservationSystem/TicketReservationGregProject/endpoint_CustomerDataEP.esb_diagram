@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_SfHCMI_aEeOMvPaDia7ZXA" type="Esb" name="endpoint_CustomerDataEP.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_Sf990I_aEeOMvPaDia7ZXA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Sf991Y_aEeOMvPaDia7ZXA" type="7001"/>
+    <children xmi:type="notation:Shape" xmi:id="_0vaBoI_lEeOMvPaDia7ZXA" type="3642" fontName="Ubuntu">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_0vaosI_lEeOMvPaDia7ZXA" type="7041">
+        <children xmi:type="notation:Node" xmi:id="_0vcd4I_lEeOMvPaDia7ZXA" type="3646">
+          <children xmi:type="notation:DecorationNode" xmi:id="_0vdE8I_lEeOMvPaDia7ZXA" type="5161"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_0vcd4Y_lEeOMvPaDia7ZXA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_0vcd4o_lEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_0vcd44_lEeOMvPaDia7ZXA"/>
+          <element xmi:type="esb:AddressEndPoint" href="endpoint_CustomerDataEP.esb#//@server/@children.0/@child"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0vcd5I_lEeOMvPaDia7ZXA" width="75" height="75"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_0vaosY_lEeOMvPaDia7ZXA" showTitle="true"/>
+      </children>
+      <element xmi:type="esb:EndpointDiagram" href="endpoint_CustomerDataEP.esb#//@server/@children.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0vaBoY_lEeOMvPaDia7ZXA" width="110" height="100"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Sf990Y_aEeOMvPaDia7ZXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Sf990o_aEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_Sf9904_aEeOMvPaDia7ZXA"/>
+    <element xmi:type="esb:EsbServer" href="endpoint_CustomerDataEP.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sf991I_aEeOMvPaDia7ZXA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_SfHCMY_aEeOMvPaDia7ZXA"/>
+  <element xmi:type="esb:EsbDiagram" href="endpoint_CustomerDataEP.esb#/"/>
+</notation:Diagram>

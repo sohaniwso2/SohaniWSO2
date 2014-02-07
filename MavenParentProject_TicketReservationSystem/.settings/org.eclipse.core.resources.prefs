@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/api/api_CustomerAPI.esb=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/api/api_CustomerAPI.esb_diagram=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_GetCustomerInSequence.esb=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_GetCustomerInSequence.esb_diagram=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_GetCustomerOutSequence.esb=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_GetCustomerOutSequence.esb_diagram=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_MakeRequestSequence.esb=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_MakeRequestSequence.esb_diagram=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_PostCustomerInSequence.esb=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_PostCustomerInSequence.esb_diagram=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_SendConfirmationSequence.esb=UTF-8
+encoding//TicketReservationSystem/src/main/graphical-synapse-config/sequences/sequence_SendConfirmationSequence.esb_diagram=UTF-8

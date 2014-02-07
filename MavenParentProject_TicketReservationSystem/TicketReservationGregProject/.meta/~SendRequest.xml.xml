@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="SendRequest.xml" isCollection="false" path="/_system/governance/TicketReservationGregProject/SendRequest.xml" registryUrl="https://localhost:9443/registry" md5="2b0fe6419cebcbc289adf7b738c6644f">
+    <mediaType>application/vnd.wso2.esb.endpoint</mediaType>
+    <version>1844</version>
+    <creator>admin</creator>
+    <createdTime>1391704701043</createdTime>
+    <lastUpdater>admin</lastUpdater>
+    <lastModified>1391704701043</lastModified>
+    <registryState>1</registryState>
+    <description/>
+</resource>

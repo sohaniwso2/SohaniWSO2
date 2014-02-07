@@ -1,0 +1,38 @@
+<data name="CustomerDSS" serviceGroup="CustomerDSS" serviceNamespace="http://ticketReservationSystem.com">
+    <description/>
+    <config id="customer">
+        <property name="org.wso2.ws.dataservice.user">root</property>
+        <property name="org.wso2.ws.dataservice.password">root</property>
+        <property name="org.wso2.ws.dataservice.protocol">jdbc:mysql://localhost:3306/TicketReservationDatabase</property>
+        <property name="org.wso2.ws.dataservice.driver">com.mysql.jdbc.Driver</property>
+    </config>
+    <query id="SelectCustomers" useConfig="customer">
+        <sql>SELECT * FROM Customers WHERE UName=? and password=?</sql>
+        <result element="Customers" rowName="Customer">
+            <element column="UID" name="UID" xsdType="xs:string"/>
+            <element column="UName" name="UName" xsdType="xs:string"/>
+            <element column="password" name="password" xsdType="xs:string"/>
+        </result>
+        <param name="UName" ordinal="1" paramType="SCALAR" sqlType="STRING" type="IN"/>
+        <param name="password" ordinal="2" paramType="SCALAR" sqlType="STRING" type="IN"/>
+    </query>
+    <query id="InsertCustomers" useConfig="customer">
+        <sql>INSERT INTO Customers(UName, password,email) VALUES(?,?,?)</sql>
+        <param name="UName" ordinal="1" sqlType="STRING"/>
+        <param name="password" ordinal="2" sqlType="STRING"/>
+        <param name="email" ordinal="3" sqlType="STRING"/>
+    </query>
+    <resource method="POST" path="/login/json">
+        <call-query href="SelectCustomers">
+            <with-param name="UName" query-param="UName"/>
+            <with-param name="password" query-param="password"/>
+        </call-query>
+    </resource>
+    <resource method="POST" path="/register/json">
+        <call-query href="InsertCustomers">
+            <with-param name="UName" query-param="UName"/>
+            <with-param name="password" query-param="password"/>
+            <with-param name="email" query-param="email"/>
+        </call-query>
+    </resource>
+</data>

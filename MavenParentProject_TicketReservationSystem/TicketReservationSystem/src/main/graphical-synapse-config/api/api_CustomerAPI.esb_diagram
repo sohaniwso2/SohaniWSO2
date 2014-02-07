@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_yf_tMI8IEeO4hJL-XyhKKA" type="Esb" name="api_CustomerAPI.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_y0GU8I8IEeO4hJL-XyhKKA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_y0IKII8IEeO4hJL-XyhKKA" type="7001">
+      <children xmi:type="notation:Shape" xmi:id="_29Mu4I_lEeOMvPaDia7ZXA" type="3668" fontName="Ubuntu">
+        <children xmi:type="notation:BasicCompartment" xmi:id="_29Mu4o_lEeOMvPaDia7ZXA" type="7044">
+          <children xmi:type="notation:Node" xmi:id="_29PLII_lEeOMvPaDia7ZXA" type="3669">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_29PLIY_lEeOMvPaDia7ZXA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_29PLIo_lEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_29PLI4_lEeOMvPaDia7ZXA"/>
+            <element xmi:type="esb:APIResource" href="api_CustomerAPI.esb#//@server/@children.0/@resources.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29PLJI_lEeOMvPaDia7ZXA" width="300" height="400"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_29d0oI_lEeOMvPaDia7ZXA" type="3669">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_29d0oY_lEeOMvPaDia7ZXA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_29d0oo_lEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_29d0o4_lEeOMvPaDia7ZXA"/>
+            <element xmi:type="esb:APIResource" href="api_CustomerAPI.esb#//@server/@children.0/@resources.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29d0pI_lEeOMvPaDia7ZXA" y="425" width="300" height="400"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_29tFMI_lEeOMvPaDia7ZXA" type="3669">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_29tFMY_lEeOMvPaDia7ZXA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_29tFMo_lEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_29tFM4_lEeOMvPaDia7ZXA"/>
+            <element xmi:type="esb:APIResource" href="api_CustomerAPI.esb#//@server/@children.0/@resources.2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29tFNI_lEeOMvPaDia7ZXA" y="850" width="300" height="400"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_29880I_lEeOMvPaDia7ZXA" type="3669">
+            <styles xmi:type="notation:DescriptionStyle" xmi:id="_29880Y_lEeOMvPaDia7ZXA"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_29880o_lEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+            <styles xmi:type="notation:LineStyle" xmi:id="_298804_lEeOMvPaDia7ZXA"/>
+            <element xmi:type="esb:APIResource" href="api_CustomerAPI.esb#//@server/@children.0/@resources.3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29881I_lEeOMvPaDia7ZXA" y="1275" width="300" height="400"/>
+          </children>
+        </children>
+        <element xmi:type="esb:SynapseAPI" href="api_CustomerAPI.esb#//@server/@children.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_29Mu4Y_lEeOMvPaDia7ZXA" width="40000" height="45000"/>
+      </children>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_y0GU8Y8IEeO4hJL-XyhKKA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_y0GU8o8IEeO4hJL-XyhKKA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_y0GU848IEeO4hJL-XyhKKA"/>
+    <element xmi:type="esb:EsbServer" href="api_CustomerAPI.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_y0GU9I8IEeO4hJL-XyhKKA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_yf_tMY8IEeO4hJL-XyhKKA"/>
+  <element xmi:type="esb:EsbDiagram" href="api_CustomerAPI.esb#/"/>
+</notation:Diagram>

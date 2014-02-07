@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:esb="http:///org/wso2/developerstudio/eclipse/gmf/esb" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_jQpU4I9aEeOIUcDFop5MsA" type="Esb" name="endpoint_BookingServiceEP.esb_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_jRaw8I9aEeOIUcDFop5MsA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_jRbYAI9aEeOIUcDFop5MsA" type="7001"/>
+    <children xmi:type="notation:Shape" xmi:id="_1zk0YI_lEeOMvPaDia7ZXA" type="3642" fontName="Ubuntu">
+      <children xmi:type="notation:BasicCompartment" xmi:id="_1zlbcI_lEeOMvPaDia7ZXA" type="7041">
+        <children xmi:type="notation:Node" xmi:id="_1zn3sI_lEeOMvPaDia7ZXA" type="3646">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1zoewI_lEeOMvPaDia7ZXA" type="5161"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_1zn3sY_lEeOMvPaDia7ZXA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_1zn3so_lEeOMvPaDia7ZXA" fontName="Ubuntu"/>
+          <styles xmi:type="notation:LineStyle" xmi:id="_1zn3s4_lEeOMvPaDia7ZXA"/>
+          <element xmi:type="esb:AddressEndPoint" href="endpoint_BookingServiceEP.esb#//@server/@children.0/@child"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1zn3tI_lEeOMvPaDia7ZXA" width="75" height="75"/>
+        </children>
+        <styles xmi:type="notation:TitleStyle" xmi:id="_1zlbcY_lEeOMvPaDia7ZXA" showTitle="true"/>
+      </children>
+      <element xmi:type="esb:EndpointDiagram" href="endpoint_BookingServiceEP.esb#//@server/@children.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1zk0YY_lEeOMvPaDia7ZXA" width="110" height="100"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_jRaw8Y9aEeOIUcDFop5MsA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_jRaw8o9aEeOIUcDFop5MsA" fontName="Ubuntu"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_jRaw849aEeOIUcDFop5MsA"/>
+    <element xmi:type="esb:EsbServer" href="endpoint_BookingServiceEP.esb#//@server"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jRaw9I9aEeOIUcDFop5MsA"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_jQpU4Y9aEeOIUcDFop5MsA"/>
+  <element xmi:type="esb:EsbDiagram" href="endpoint_BookingServiceEP.esb#/"/>
+</notation:Diagram>

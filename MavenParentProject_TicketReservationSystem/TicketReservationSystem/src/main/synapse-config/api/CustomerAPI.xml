@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse" name="CustomerAPI" context="/customers">
+    <resource methods="POST" uri-template="/login/json" inSequence="GetCustomerInSequence" outSequence="GetCustomerOutSequence">
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/register/json" inSequence="PostCustomerInSequence">
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/request/json" inSequence="MakeRequestSequence">
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/confirm/json" inSequence="SendConfirmationSequence">
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="PostCustomerInSequence">
+    <log level="full">
+        <property name="text" value="** Customer Registration Process **"/>
+    </log>
+    <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
+    <header name="To" scope="default" action="remove"/>
+    <property name="UName" expression="//jsonObject/register/title/UName/text()" scope="default" type="STRING"/>
+    <property name="password" expression="//jsonObject/register/title/password/text()" scope="default" type="STRING"/>
+    <property name="email" expression="//jsonObject/register/title/email/text()" scope="default" type="STRING"/>
+    <log level="custom" separator=",">
+        <property name="UName" expression="$ctx:UName"/>
+        <property name="password" expression="$ctx:password"/>
+        <property name="email" expression="$ctx:email"/>
+    </log>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Before Sending message to Customer Registration Data Service ======================="/>
+    </log>
+    <payloadFactory media-type="json" description="">
+        <format>
+			{
+			"_post_register_json": {
+			"UName": "$1",
+			"password": "$2",
+			"email": "$3"
+			}
+			}
+		</format>
+        <args>
+            <arg evaluator="xml" expression="//jsonObject/register/title/UName/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/register/title/password/text()"/>
+            <arg evaluator="xml" expression="//jsonObject/register/title/email/text()"/>
+        </args>
+    </payloadFactory>
+    <property name="messageType" value="application/json" scope="axis2" type="STRING"/>
+    <log level="custom" separator=",">
+        <property name="MessageFlow" value="======================= Sending Request To Customer Registration Data Service ======================="/>
+    </log>
+    <log level="full" separator=","/>
+    <send>
+        <endpoint key="CustomerDataEP"/>
+    </send>
+</sequence>
