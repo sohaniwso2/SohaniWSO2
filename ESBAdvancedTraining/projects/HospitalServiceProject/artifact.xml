@@ -8,8 +8,8 @@
     <artifact name="RegisterDoctorInSequence" groupId="com.example.HospitalServiceProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/RegisterDoctorInSequence.xml</file>
     </artifact>
-    <artifact name="QueryDoctor" groupId="com.example.HospitalServiceProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
-        <file>src/main/synapse-config/sequences/QueryDoctor.xml</file>
+    <artifact name="AddDoctorSequence" groupId="com.example.HospitalServiceProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/AddDoctorSequence.xml</file>
     </artifact>
     <artifact name="jms_inbound" groupId="com.example.HospitalServiceProject.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/inbound-endpoints/jms_inbound.xml</file>

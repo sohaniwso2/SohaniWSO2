@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<inboundEndpoint name="jms_inbound" onError="fault" protocol="jms" sequence="QueryDoctor" suspend="false" xmlns="http://ws.apache.org/ns/synapse">
+<inboundEndpoint name="jms_inbound" onError="fault" protocol="jms" sequence="AddDoctorSequence" suspend="false" xmlns="http://ws.apache.org/ns/synapse">
     <parameters>
         <parameter name="interval">1000</parameter>
         <parameter name="sequential">true</parameter>
