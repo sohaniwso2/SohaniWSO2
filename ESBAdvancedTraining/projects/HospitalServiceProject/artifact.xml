@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="HospitalServiceApi" groupId="com.example.HospitalServiceProject.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/HospitalServiceApi.xml</file>
+    </artifact>
+    <artifact name="faultSequence" groupId="com.example.HospitalServiceProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/faultSequence.xml</file>
+    </artifact>
+    <artifact name="RegisterDoctorInSequence" groupId="com.example.HospitalServiceProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/RegisterDoctorInSequence.xml</file>
+    </artifact>
+    <artifact name="QueryDoctor" groupId="com.example.HospitalServiceProject.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/QueryDoctor.xml</file>
+    </artifact>
+    <artifact name="jms_inbound" groupId="com.example.HospitalServiceProject.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/jms_inbound.xml</file>
+    </artifact>
+    <artifact name="addDoctorEp" groupId="com.example.HospitalServiceProject.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/addDoctorEp.xml</file>
+    </artifact>
+</artifacts>
